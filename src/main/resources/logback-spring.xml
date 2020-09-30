@@ -15,6 +15,7 @@
 
     <!--输出到文件-->
     <appender name="file_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/home/web/logs/febs/info.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.path}/info/info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <MaxHistory>${log.maxHistory}</MaxHistory>
@@ -30,6 +31,7 @@
     </appender>
 
     <appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/home/web/logs/febs/error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.path}/error/error.%d{yyyy-MM-dd}.log</fileNamePattern>
         </rollingPolicy>
