@@ -47,7 +47,11 @@ spring:
         max-wait: 10000
     # 连接超时时间（毫秒）
     timeout: 5000
-
+  data:
+    mongodb:
+      host: 47.94.157.100
+      port: 27017
+      database: articledb
 logging:
   level:
     cc.mrbird.febs: debug
