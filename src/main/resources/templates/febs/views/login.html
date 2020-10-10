@@ -112,7 +112,8 @@
 </div>
 <script th:src="@{layui/layui.js}"></script>
 <script th:inline="javascript">
-    var ctx = [[@{/}]];
+    <!--前缀-->
+    var ctx = '/febs/';
 
     layui.extend({
         validate: './febs/lay/modules/validate'
