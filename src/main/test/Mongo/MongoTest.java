@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDateTime;
@@ -60,4 +61,24 @@ public class MongoTest {
         Comment comment = commentService.findCommentById("5d6a27b81b8d374798cf0b41");
         System.out.println(comment);
     }
+    
+    /**
+     * 测试根据父id查询子评论的分页列表
+     */
+    @Test
+    public void testFindCommentListPageByParentid() {
+        Page<Comment> pageResponse = commentService.findCommentListPageByParentid("3", 1, 2);
+        System.out.println("----总记录数：" + pageResponse.getTotalElements());
+        System.out.println("----当前页数据：" + pageResponse.getContent());
+    }
+    
+    /**
+     * 点赞数+1
+     */
+    @Test
+    public void testUpdateCommentLikenum() {
+        //对3号文档的点赞数+1
+        commentService.updateCommentLikenum("3");
+    }
+    
 }
