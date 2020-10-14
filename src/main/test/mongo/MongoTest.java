@@ -1,4 +1,4 @@
-package Mongo;
+package mongo;
 
 import cc.mrbird.febs.FebsShiroApplication;
 import cc.mrbird.febs.article.entity.Comment;

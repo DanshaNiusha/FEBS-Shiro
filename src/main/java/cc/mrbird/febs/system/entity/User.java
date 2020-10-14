@@ -11,7 +11,12 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.wuwenze.poi.annotation.Excel;
 import com.wuwenze.poi.annotation.ExcelField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -25,6 +30,7 @@ import java.util.Date;
 @Data
 @TableName("t_user")
 @Excel("用户信息表")
+@Accessors
 public class User implements Serializable {
 
     private static final long serialVersionUID = -4352868070794165001L;
